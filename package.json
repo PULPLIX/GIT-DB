@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/PULPLIX/GIT-DB#readme",
   "dependencies": {
+    "pos": "^0.4.2",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {}

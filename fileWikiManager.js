@@ -17,6 +17,18 @@ const readContendBody = async (wikiId) => {
     return data;
 }
 
+const ensureDirectoryExistence = async () => {
+    const directory = `${__dirname}/../wikis`;
+    await fs.mkdir(directory).then(() => {
+        return true;
+    }).catch((error)=>{
+        if(error.code == 'EEXIST'){
+            return true;
+        }
+        return false;
+    })
+}
 exports.saveContentBody = saveContentBody;
 exports.readContendBody = readContendBody;
+exports.ensureDirectoryExistence = ensureDirectoryExistence;
 
